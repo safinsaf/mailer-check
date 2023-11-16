@@ -15,8 +15,11 @@ jobs:
       - name: ls
         run: ls -alh
 
-      - name: ls
+      - name: ls ..
         run: ls -alh ..
+
+      - name: ls ../..
+        run: ls -alh ../..
 
       - name: Save secret as file
         env:
