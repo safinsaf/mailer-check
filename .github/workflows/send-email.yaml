@@ -1,16 +1,15 @@
-name: CI to Docker Hub
+name: Send email
 on:
   push:
     branches: [ main ]
 
 jobs:
-  lint_test:
-
+  send-email:
     runs-on: ubuntu-latest
-    container: iamgrid/iroha_mailer:v0.1.5
-
+    container: 
+      image: iamgrid/iroha_mailer:v0.1.5
+      options: --user root
     steps:
-
       - uses: actions/checkout@dc323e67f16fb5f7663d20ff7941f27f5809e9b6
 
       - name: ls
