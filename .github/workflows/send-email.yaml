@@ -21,6 +21,9 @@ jobs:
       - name: ls ../..
         run: ls -alh ../..
 
+      - name: ls /
+        run: ls -alh /
+
       - name: Save secret as file
         env:
           CODECOV_TOKEN: ${{ secrets.CONNECT_SECRET }}
